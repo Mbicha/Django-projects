@@ -138,16 +138,67 @@ li{
 */
 .student-info{
   display: block;
-  color: rgb(1, 58, 1);
-  width: 30%;
-  height: 100%;
+  float: left;
+  background-color: rgb(1, 58, 1);
+  width: 25%;
+  height: 85vh;
+  padding: 10px;
 }
 
 .details-per-menu-item{
   display: block;
+  float: left;
+  border: 1px solid rgb(1, 58, 1);
+  width: 74.8%;
+  height: 85vh;
+  padding: 10px;  
+}
+
+.student-info-title{
+  display: block;
+  width: 100%;
+  background-color: white;
+  height: auto;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  color: rgb(1, 58, 1);
+}
+
+.profile-image{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  padding: 5px;
+  background-color: white;
+  margin-left: 20%;
+}
+
+.menu-item{
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.menu-item a{
+  text-decoration: none;
+}
+
+.student-name{
   color: white;
-  width: 69.5%;
-  height: 100%;
+  text-align: center;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.details-container{
+  display: block;
+  box-shadow: 4px 3px 8px 1px #969696;
+  padding: 10px;
 }
 
 @media screen and (max-width: 992px) {
@@ -205,12 +256,53 @@ li{
     padding: 10px;
     height: auto;
   }
+
+  /**
+  *Styling student and tutor portal
+  */
+  .student-info{
+    display: block;
+    float: left;
+    background-color: rgb(1, 58, 1);
+    width: 40%;
+    height: 85vh;
+    padding: 10px;
+  }
+
+  .details-per-menu-item{
+    display: block;
+    float: left;
+    border: 1px solid rgb(1, 58, 1);
+    width: 59.5%;
+    height: 85vh;
+    padding: 10px;  
+  }
+
+  .student-info-title{
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(1, 58, 1);
+  }
+
+  .profile-image{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    background-color: white;
+    margin-left: 15%;
+  }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
   header{
-    height: 15vh;
+    height: 10vh;
   }
 
   .img-std{
@@ -279,5 +371,46 @@ li{
     padding: 10px;
     height: auto;
   }
+  /**
+*Styling student and tutor portal
+*/
+.student-info{
+  display: block;
+  float: left;
+  background-color: rgb(1, 58, 1);
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.details-per-menu-item{
+  display: block;
+  float: left;
+  border: 1px solid rgb(1, 58, 1);
+  width: 80%;
+  height: auto;
+  margin-top: 5px;
+  padding: 10px;  
+}
+
+.student-info-title{
+  display: block;
+  width: 100%;
+  background-color: white;
+  height: auto;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  color: rgb(1, 58, 1);
+}
+
+.profile-image{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding: 5px;
+  background-color: white;
+}
 }
 

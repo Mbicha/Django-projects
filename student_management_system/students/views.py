@@ -13,3 +13,6 @@ def home(request):
 
 def studentPortal(request):
     return render(request, 'students/student-portal.html')
+
+def tutorPortal(request):
+    return render(request, 'students/tutor-portal.html')

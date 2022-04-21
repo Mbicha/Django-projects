@@ -1,1 +1,49 @@
-<h1>This is first HTML</h1>
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="reg-section">    
+    <div class="reg-form">
+        <img src="{% static 'images/student-logo.svg' %}" class="img-std-reg" />
+        <form>     
+            <p class="login-title">
+                Register Here
+            </p>
+            {% csrf_token %}
+
+            {% for field in form %}
+
+            <div class="input-row">
+                <div class="label-section">
+                    <label>{{field.label}}</label>
+                </div>
+                <div class="input-section">
+                    {{field}}
+                </div>
+            </div>
+            {% endfor %}
+            <a href="">
+                <input class="submit-row" type="submit" value="Register"/>
+            </a>
+            <p class="account">Already have an account?<a href="{% url 'home' %}">Login</a></p>
+            
+         </form>
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="text-center">
+        <img src="" class="img-thumbnail" alt="Logo">
+    </div>
+    <div class="text-center">
+        <form class="row g-2 justify-content-center">
+            
+
+            <div class="col-12">
+              <a href="{% url 'home' %}"><button class="btn btn-primary" type="submit">Register</button></a>
+            </div>
+            
+            
+        </form>
+    </div>
+</div> -->
+{% endblock content %}

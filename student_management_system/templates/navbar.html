@@ -1,29 +1,35 @@
 {% load static %}
-<header>
-    <img src="{% static 'images/student_logo.svg' %}" class="img-std" alt="Logo">
-    
-    <div class="nav-controller">
-      <ul class="nav-items">
-        <li>
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
-        <li>
-          <a class="nav-link" href="">Courses</a>
-        </li>
-        <li>
-          <a class="nav-link" href="">About</a>
-        </li>
-        <li>
-          <a class="nav-link" href="">Contacts</a>
-        </li>
-        <li>
-          <a class="nav-link" href="{% url 'register-user' %}">Registration</a>
-        </li>
-      </ul>  
-    </div>
+<nav class="navbar">
+  <img src="{% static 'images/student_logo.svg' %}" class="img-std" alt="Logo">
 
-    <div class="menu-icon">
-      <img src="{% static 'images/menu.svg' %}" class="img-std" alt="menu"/>
-    </div>
+  <input type="checkbox" id="check"/>
+  <label for="check" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+
+  <!-- <a href="#" class="toggle-button">
     
-</header>
+  </a> -->
+
+  <div id="nav-controller">
+    <ul>
+      <li>
+        <a href="{% url 'home' %}">Home</a>
+      </li>
+      <li>
+        <a href="{% url 'student-portal' %}">Courses</a>
+      </li>
+      <li>
+        <a href="{% url 'tutor-portal' %}">About</a>
+      </li>
+      <li>
+        <a href="">Contacts</a>
+      </li>
+      <li>
+        <a href="{% url 'register-user' %}">Registration</a>
+      </li>
+    </ul>  
+  </div>
+</nav>

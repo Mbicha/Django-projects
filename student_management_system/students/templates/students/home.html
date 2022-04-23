@@ -14,7 +14,7 @@
 </div>
 <div class="login-section">    
     <div class="login-form">
-        <form>     
+        <form method="post">     
             <p class="login-title">
                 Login Here
             </p>
@@ -37,7 +37,11 @@
             <a href="">
                 <input class="submit-row" type="submit" value="Login"/>
             </a>
-            <p class="account">Do not have an account?<a href="{% url 'register-user' %}">Register</a></p>
+            <p class="account">Do not have an account?<a href="{% url 'register-user' %}">Register As:</a></p>
+            <div class="student_or_tutor">
+                <a class="stude_tutor" href="{% url 'register-user' %}">Student</a>
+                <a class="stude_tutor" href="{% url 'create-tutor' %}">Tutor</a>    
+            </div>
         </form>
     </div>
 </div>

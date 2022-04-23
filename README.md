@@ -1,1 +1,1 @@
-Initial Readme
+Created first djano project stent management system.

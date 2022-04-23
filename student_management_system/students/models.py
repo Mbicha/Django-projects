@@ -8,6 +8,7 @@ class Student(models.Model):
     GENDER_MALE = 0
     GENDER_FEMALE = 1
     GENDER_CHOICE = [(GENDER_MALE, 'Male'), (GENDER_FEMALE, 'Female')]
+    
     first_name = models.CharField(max_length=200, null=True, blank=True)
     last_name = models.CharField(max_length=200, null=True, blank=True)
     student_email = models.CharField(max_length=200)

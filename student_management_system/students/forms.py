@@ -5,10 +5,11 @@ from django import forms
 from .models import Student, Instructor
 
 class StudentForm(ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
         model = Student
         fields =  [
-            'first_name', 'last_name', 'student_email', 'student_tel',
+            'first_name', 'last_name', 'student_email','password', 'student_tel',
             'gender', 'location', 'date_of_birth'
         ]
 
@@ -19,11 +20,12 @@ class StudentForm(ModelForm):
             field.widget.attrs.update({'class':'input'})
 
 class TutorForm(ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
         model = Instructor
 
         fields = [
-            'full_name', 'instructor_email', 'salary'
+            'full_name', 'instructor_email','password','salary'
         ]
 
     def __init__(self, *args, **kwargs):

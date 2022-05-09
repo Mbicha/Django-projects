@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+"""
 from .models import Student, Instructor
 from .forms import StudentForm, TutorForm
 
@@ -31,16 +32,33 @@ def createTutor(request):
     context = {'form': form}
 
     return render(request, 'students/signup.html', context)
-"""
+
+def displayUser(request, email):
+    pass
+
 def signin(request):
+    isStudentOrTutor = ""
+    isLogedIn = False
+
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
 
         try:
-            student = Student.objects.get(email=student)
-            tutor = Instructor.objects.get(email=tutor)
-"""
+            if Student.objects.get(student_email__exact=email) and Student.objects.get(password__exact=password):
+                isStudentOrTutor = "Student"
+                user = Student.objects.get(student_email=email)
+            elif Instructor.objects.get(instructor_email__exact=email) and Student.objects.get(password__exact=password):
+                isStudentOrTutor = "Tutor"
+                user = Instructor.objects.get(instructor_email=email)
+        except:
+            print("No such a user")
+
+        if user is not None:
+            isLogedIn = True
+            return redirect('display-user')
+        else:
+            print("Email or Password is wrong")
 
 def home(request):
     return render(request, 'students/home.html')
@@ -50,3 +68,4 @@ def studentPortal(request):
 
 def tutorPortal(request):
     return render(request, 'students/tutor-portal.html')
+"""

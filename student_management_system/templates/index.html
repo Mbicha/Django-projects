@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="description-section">
+    <h1>Droid-fi School</h1>
+    <p>
+        Droid-fi School was founded in 8th, April 2022 by a respected Software Engineer Charles Mbithi.
+        The School runs online classes for Web and Mobiles apps. Upto now, we have been able to register
+        over 20,000 students from various parts of the globe. We have quaified Tutors in every field of
+        sofware development.
+    </p>
+</div>
+<div class="login-section">    
+    <div class="login-form">
+        <form method="post">     
+            <p class="login-title">
+                Login Here
+            </p>
+            <div class="input-row">
+                <div class="label-section">
+                    <label>Email Address</label>
+                </div>
+                <div class="input-section">
+                    <input type="email" name="email"/>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="label-section">
+                    <label>Password</label>
+                </div>
+                <div class="input-section">
+                    <input type="password" name="password"/>
+                </div>
+            </div>
+            <a href="">
+                <input class="submit-row" type="submit" value="Login"/>
+            </a>
+            <p class="account">Do not have an account?<a href="#">Register As:</a></p>
+            <div class="student_or_tutor">
+                <a class="stude_tutor" href="#">Student</a>
+                <a class="stude_tutor" href="#">Tutor</a>    
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

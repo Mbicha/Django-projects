@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Travel Safe</title>
+</head>
+<body>
+    <!--NAVIGATION SECTION-->
+    <nav class="navbar">
+        <img src="images/bus.jpg" class="img-std" alt="Logo">
+      
+        <input type="checkbox" id="check"/>
+        <label for="check" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+      
+        <div id="nav-controller">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="book.html">Book</a>
+            </li>
+            <li>
+                <a href="route.html">Routes</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>  
+        </div>
+      </nav>
+
+      <!--MAIN CONTAINER-->
+      <div class="main-contaner">          
+          <div class="search-book-card">
+            <div class="book-title">
+                <span>
+                  Booking Details
+                </span>
+            </div>
+            <div class="booking-cards">
+                <div class="booking-card">
+                  <div class="book-title">
+                    <span>
+                      Passenger Details
+                    </span>
+                  </div>
+                  <form>
+                    <input class="input-data" type="text" placeholder="First Name" required />
+                    <input class="input-data" type="text" placeholder="Last Name" required />
+                    <input class="input-data" type="text" placeholder="Phone Number" required />
+                    <input class="input-data" type="email" placeholder="Email Address"/>
+                    <input type="submit" value="Save" class="submit-data"/>
+                  </form>
+                </div>
+                <div class="booking-card">
+                  <div class="book-title">
+                    <span>
+                      Travelling Details
+                    </span>
+                  </div>
+                  <form>
+                    <input class="input-data" type="date" required />
+                    <input class="input-data" type="time" placeholder="Depaarture Time" required />
+                    <input class="input-data" type="text" placeholder="Amount Paid" required />
+                    <input type="submit" value="Save" class="submit-data"/>
+                  </form> 
+                </div>
+                <div class="booking-card" id="bus-details">
+                  <div class="book-title">
+                    <span>
+                      Bus Details
+                    </span>
+                  </div>
+                  <form>
+                    <input class="input-data" type="text" placeholder="From" required />
+                    <input class="input-data" type="text" placeholder="To" required />
+                    <input class="input-data" type="text" placeholder="Bus Number" required />
+                    <input class="input-data" type="text" placeholder="Select Seat" required />
+                  </form> 
+                </div>
+            </div>          
+          </div>
+      </div>
+</body>
+</html>

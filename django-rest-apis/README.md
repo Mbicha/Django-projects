@@ -1,0 +1,1 @@
+Added first API project in django "school_sys" which will have tutor, student, school, departments and courses.

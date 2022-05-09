@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="reg-section">    
+    <div class="reg-form">
+        <form method="post">     
+            <p class="login-title">
+                Register Here
+            </p>
+            {% csrf_token %}
+
+            {% for field in form %}
+
+            <div class="input-row">
+                <div class="label-section">
+                    <label>{{field.label}}</label>
+                </div>
+                <div class="input-section">
+                    {{field}}
+                </div>
+            </div>
+            {% endfor %}
+            <a href="">
+                <input class="submit-row" type="submit" value="Register"/>
+            </a>
+            <p class="account">Already have an account?<a href="{% url 'home' %}">Login</a></p>
+            
+         </form>
+    </div>
+</div>
+{% endblock content %}

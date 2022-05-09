@@ -1,0 +1,553 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /* background-color: #FFC401; */
+  }
+  
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC401;
+  }
+  
+  .img-std{
+    display: block;
+    padding: 5px;
+    width: 96px;
+    height: 60%;
+  }
+  
+  #nav-controller ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  
+  #nav-controller li{
+    list-style: none;
+  }
+  
+  #nav-controller li a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+  }
+  
+  #nav-controller li:hover{
+    background-color: green;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  .toggle-button{
+    position: absolute;
+    top: .9rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: green;
+    border-radius: 10px;
+  }
+
+  .main-contaner{
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: aqua;
+      opacity: 48%;
+      background-image: url("../images/bus_bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 10px;
+  }
+
+  .search-route-card{
+      display: block;
+      border: 1px solid white;
+      width: 40%;
+      height: 400px;
+      background-color: white;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 10px;
+  }
+  .search-book-card{
+      display: block;
+      padding: 10px;
+      background-color: white;
+      width: 100%;
+      min-height: 500px;
+      max-height: auto;
+      border-radius: 10px;
+  }
+  .book-title{
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      color: green;
+      text-align: center;
+      font-size: 36px;
+  }
+  .booking-cards{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 5px;
+  }
+  .booking-card{
+    display: inline-block;
+    box-shadow: 3px 3px 3px 3px black;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 32%;
+    padding: 5px;
+    background-color: white;
+  }
+  #bus-details{
+      overflow: scroll;
+  }
+
+  #route{
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .route-route-card{
+    display: block;
+    border: 1px solid green;
+    width: 100%;
+    height: 180px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+  }
+
+  .bus-image{
+    display: block;
+    height: 100%;
+    width: 30%;
+    float: left;
+    padding: 5px;
+    border-radius: 50%;
+    background-image: url("../images/bus.jpg");
+  }
+
+  .route-details{
+    display: block;
+    float: right;
+    height: 100%;
+    width: 68%;
+  }
+
+  .route-fine-details{
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid green;
+    color: black;
+    margin-top: 5px;
+  }
+
+  .book-now{
+    display: block;
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    background-color: #FFC401;
+    border-radius: 5px;
+    color: green;
+    margin-top: 5px;
+  }
+
+  .main-about-card{
+    display: block;
+    border: 1px solid white;
+    width: 60%;
+    height: 90%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #979690;
+  }
+
+  .about-image{
+    display: block;
+    width: 40%;
+    height: 80%;
+    float: left;
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-size: cover;
+    border-radius: 10px 0px 100% 0px;
+    background-image: url("../images/bus.jpg");
+  }
+
+  .about-details{
+    display: block;
+    width: 58%;
+    background-color: white;
+    float: right;
+    box-shadow: 2px 2px 2px 2px black;
+  }
+  .about-title{
+    font-size: 32px;
+    color: green;
+    padding: 5px;
+    text-align: center;
+  }
+  .about-fine-details{
+    font-size: 24px;
+    padding: 10px;
+    color: black;
+  }
+
+  .about-title{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 15vh;
+    color: #FFC401;
+  }
+
+  .countacus-main-card{
+    display: inline-block;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 20vh;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .contactus-min-main-card{
+    display: inline-block;
+    width: 33%;
+    height: 300px;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 10px;
+  }
+
+  form{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .input-data{
+    width: 70%;
+    height: 30px;
+    font-size: 24px;
+    color: black;
+    padding: 20px 5px;
+    margin-bottom: 5px;
+  }
+
+  .submit-data{
+    width: 70%;
+    font-size: 2rem;
+    background-color: #FFC401;
+    color: green;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: 'Robot';
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .img-std{
+      width: 96px;
+      height: 80%;
+    }
+
+    .search-route-card{
+        display: block;
+        border: 1px solid white;
+        width: 70%;
+        min-height: 400px;
+        max-width: 80%;
+        background-color: white;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .main-about-card{
+      display: block;
+      border: 1px solid white;
+      width: 80%;
+      height: 500px;
+      background-color: white;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #979690;
+    }
+    .search-book-card{
+      display: block;
+      padding: 10px;
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .booking-cards{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 5px;
+    }
+    .booking-card{
+      display: inline-block;
+      box-shadow: 3px 3px 3px 3px black;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      width: 45%;
+      height: 400px;
+      padding: 10px;
+      background-color: white;
+    }
+  
+    .about-image{
+      display: block;
+      width: 30%;
+      height: 50%;
+      float: left;
+      background-repeat: no-repeat;
+      padding: 10px;
+      background-size: cover;
+      border-radius: 10px 0px 100% 0px;
+      background-image: url("../images/bus.jpg");
+    }
+
+    .about-details{
+      display: block;
+      background-color: white;
+      width: 69%;
+      float: right;
+      box-shadow: 2px 2px 2px 2px black;
+    }
+    .about-title{
+      font-size: 24px;
+      color: green;
+      padding: 5px;
+      text-align: center;
+    }
+    .about-fine-details{
+      font-size: 18px;
+      padding: 5px;
+      color: black;
+    }
+
+    .about-title{
+      font-size: 48px;
+      text-align: center;
+      margin-top: 10vh;
+      color: #FFC401;
+    }
+
+    .countacus-main-card{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20vh;
+      margin: 0 auto;
+      background-color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .contactus-min-main-card{
+      display: inline-block;
+      width: 45%;
+      height: 300px;
+      margin-bottom: 5px;
+      box-shadow: 2px 2px 2px 2px black;
+      border-radius: 10px;
+    }
+  
+}
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    .img-std{
+      display: block;
+      float: left;
+      padding: 5px;
+      width: 96px;
+      height: 80%;
+    }
+
+    .main-contaner{
+      height: 100%;
+    }
+
+    .search-route-card{
+        display: block;
+        border: 1px solid white;
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 10px;
+    }
+    
+    .toggle-button{
+      display: flex;
+    }
+  
+    #nav-controller{
+      display: none;
+      height: 100%;
+      width: 100%;
+    }
+  
+    .navbar{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #nav-controller ul{
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    #nav-controller li{
+      text-align: center;
+  
+    }
+  
+    #nav-controller li a{
+      font-size: 30px;
+      padding: .5rem 1rem;
+    }
+  
+    #check:checked ~ #nav-controller{
+      display: flex;
+    }
+
+    .search-book-card{
+      display: block;
+      padding: 10px;
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .booking-cards{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 5px;
+    }
+    .booking-card{
+      display: inline-block;
+      box-shadow: 3px 3px 3px 3px black;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      width: 90%;
+      height: 100%;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /*ABOUT*/
+    .main-about-card{
+      display: block;
+      border: 1px solid white;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      margin-top: 5px;
+      padding: 10px;
+      background-color: #979690;
+    }
+  
+    .about-image{
+      display: block;
+      width: 45%;      
+      height: 40%;
+      margin: auto 25%;
+      background-repeat: no-repeat;
+      padding: 10px;
+      background-size: cover;
+      border-radius: 50%;
+      background-image: url("../images/bus.jpg");
+    }
+
+    .about-details{
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      background-color: white;
+      box-shadow: 2px 2px 2px 2px black;
+    }
+    .about-title{
+      font-size: 24px;
+      color: green;
+      padding: 5px;
+      text-align: center;
+    }
+    .about-fine-details{
+      font-size: 18px;
+      padding: 5px;
+      color: black;
+    }
+
+    .about-title{
+      font-size: 32px;
+      text-align: center;
+      margin-top: 10vh;
+      color: #FFC401;
+    }
+
+    .countacus-main-card{
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20vh;
+      margin: 0 auto;
+      background-color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .contactus-min-main-card{
+      display: inline-block;
+      width: 90%;
+      height: 300px;
+      margin-bottom: 5px;
+      box-shadow: 2px 2px 2px 2px black;
+      border-radius: 10px;
+    }
+}

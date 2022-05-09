@@ -22,9 +22,26 @@ def createStudent(request):
     else:
         return Response(seriralizer._errors)
 
-@api_view(['GET'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def getStudentById(request, pk):
-    if request.method == 'GET':
+    try:
         student = Student.objects.get(pk=pk)
+    except:
+        print("Object not found")
+
+    if request.method == 'GET':
         serializer = StudentSerializers(student)
         return Response(serializer.data)
+
+    if request.method == 'PUT':
+        serializer = StudentSerializers(student, request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return serializer.errors
+
+    if request.method == 'DELETE':
+        student.delete()
+        return Response({
+            'delete': True
+        })

@@ -12,3 +12,13 @@ class StudentSerializers(serializers.Serializer):
     
     def create(self, data):
         return Student.objects.create(**data)
+
+    def update(self, instance, data):
+        instance.first_name = data.get('first_name', instance.first_name)
+        instance.last_name = data.get('last_name', instance.last_name)
+        instance.email = data.get('email', instance.email)
+        instance.course = data.get('course', instance.course)
+        instance.age = data.get('age', instance.age)
+
+        instance.save()
+        return instance

@@ -1,4 +1,3 @@
-from attr import fields
 from .models import *
 from rest_framework import serializers
 

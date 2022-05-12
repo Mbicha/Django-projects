@@ -246,8 +246,15 @@
     display: inline-block;
     width: 33%;
     height: 300px;
+    padding: 10px;
     box-shadow: 2px 2px 2px 2px black;
     border-radius: 10px;
+  }
+
+  #contact-us-location{
+    background-image: url("../images/kisumu-map.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   form{
@@ -261,6 +268,15 @@
   .input-data{
     width: 70%;
     height: 30px;
+    font-size: 24px;
+    color: black;
+    padding: 20px 5px;
+    margin-bottom: 5px;
+  }
+
+  textarea{
+    width: 70%;
+    height: auto;
     font-size: 24px;
     color: black;
     padding: 20px 5px;

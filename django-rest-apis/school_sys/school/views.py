@@ -9,7 +9,7 @@ from rest_framework import status
 # Create your views here.
 class SchoolList(APIView):
     def get(self, request):
-        schools = School.objects.get()
+        schools = School.objects.all()
         serilizers = SchoolSerializer(schools, many=True)
         return Response(serilizers.data, status=status.HTTP_200_OK)
 
